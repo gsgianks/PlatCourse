@@ -79,7 +79,6 @@ nav ul > li a:hover:before{
 }
 .login_main input[type=submit]{
   margin-top:4%;
-  border-radius: 15px;
 }
 .form_card{
   position: relative;
@@ -95,10 +94,10 @@ nav ul > li a:hover:before{
   border:2px solid #E0E0E0;
   background: #E0E0E0;
   padding:2%;
-  margin-top: 4%;
+  margin-bottom:2%;
   border:none;
   width: 90%;
-  font-size: 17px;
+  font-size: 14px;
   outline: none;
   -webkit-border-radius: 15px;
   -webkit-transition: all 0.6s ease;
@@ -108,9 +107,9 @@ nav ul > li a:hover:before{
   transition: all 0.6s ease;
 }
 .input_redondo_oscuro:focus{
-  border:1px solid #E0E0E0;
-  outline: none;
+  border-color:#E0E0E0;
   background: #fff;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
 }
 .input_bordes_redondos:focus{
   border:2px solid #E0E0E0;
@@ -132,54 +131,50 @@ nav ul > li a:hover:before{
 .input_icono{
   color:#757575;
 }
-.boton-borde{
-  border: 2px solid #616161;
-  padding: 3%;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  -webkit-transition-duration: 0.4s; 
-  transition-duration: 0.4s;
-}
-
-.boton-borde:hover {
-  color: white;
-}
-
-.boton_borde_cancel{
-  color:#13232f;
-  border: 2px solid #13232f;
-  background: #fff;
-}
-.boton_borde_cancel:hover{
-  background:#13232f;
-  color: #fff;
-}
-.boton_borde_aceptar{
-  color:#26a69a;
-  border: 2px solid #26a69a;
-  background: #fff;
-}
-.boton_borde_aceptar:hover{
-  background:#26a69a;
-  color: #fff;
-}
 .bSend:hover{
   background: #fff;
   color: #283593;
 }
-.button_fill{
-  color:#fff;
-  padding: 3%;
-  box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
-  transition: all 200ms ease-in-out;
-  border:none;
-  font-size: 18px;
+.boton_redondeado{
+      text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+      text-align:center;
+      border:none;
+      text-decoration: none;
+      display:inline-block;
+      color: #FFF;
+      background: #7F8C8D;
+      padding: 7px 20px;
+      white-space: nowrap;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 100px;
+      margin: 10px 5px;
+      -webkit-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
 }
-.button_fill:active {
-  background: darken(#7E57C2, 20%);
-  border-bottom: .3em solid darken(#7E57C2, 30%);
+/*br = boton_redondeado*/
+.br_verde{
+  background: #00897b;
+  box-shadow: 0px 5px 0px 0px #00695c;
+}
+.br_verde:hover{
+  background: #009688;
+}
+.br_verde:active{
+  box-shadow: 0px 2px 0px 0px #00897b;
+}
+.br_azul{
+  background: #455a64;
+  box-shadow: 0px 5px 0px 0px #263238;
+}
+.br_azul:hover{
+  background: #546e7a;
+}
+.br_azul:active{
+  box-shadow: 0px 2px 0px 0px #00897b;
 }
 .card{
   background: #fff;
@@ -249,7 +244,18 @@ nav ul > li a:hover:before{
 .azul_oscuro{
   background:#13232f;
 }
-
+.verde_limon{
+  background: #8bc34a;
+}
+.verde_limon:active{
+  background:#689f38;
+}
+.rojo_flat{
+  background: #e53935;
+}
+.rojo_flat:active{
+  background: #b71c1c;
+}
 .sombra_boton{
   box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 
              0 1px 5px 0 rgba(0,0,0,0.12),
@@ -308,10 +314,13 @@ nav ul > li a:hover:before{
   margin: 10% auto;
   position: relative;
 }
-.fEvaluacion div{
-  margin-top:3%;
-} 
 
+#fEvaluacion label{
+  margin-left: 1%;
+}
+#fEvaluacion h3{
+  margin-bottom: 1%;
+}
 footer {
   position: absolute;
   bottom: 0;
@@ -323,7 +332,61 @@ footer {
 footer p{
  padding:10px;  
 }
+/*Formulario pregunta*/
+.formPregunta{
+  background: #fff;
+  margin:5% 28%;
+  max-width:40%;
+  min-width:40%;
+  overflow:auto;
+  padding:10px;
+}
+.formPregunta textarea{
+  min-width: 85%;
+  max-width: 85%;
+  min-height: 30px;
+  max-height: 50px;
+}
+.cntRespuesta textarea, .cntRespuesta button {
+  float: left;
+}
+.cntRespuesta button{
+  margin: 2%; 
+}
+.botonCircular{
+  border:none;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
 
+.botonCircular:active{
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+}
+
+.cntRespuesta{
+  min-height: 100px;
+  max-height: 300px;
+  overflow:auto;
+  margin-top: 2%;
+}
+
+.footOpciones{
+  border-top: 1px solid #BDBDBD;
+}
+.btn_cerrar{
+  font-size: 25px;
+  float: right;
+  cursor:pointer;
+}
+.btn_cerrar:hover{
+  color:#e53935;
+}
 /*Media queries 0 2px 5px 0 rgba(0,0,0,.26);
 }*/
 @media only screen and (max-width: 580px) {
