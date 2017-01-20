@@ -45,4 +45,23 @@ $(document).ready(function(){
   			this.reset();
 		});
     }
+
+    /*LLevar al link del disenador evaluaciones*/
+    $(".linkPregunta").on("click", function(e){
+    	e.preventDefault();
+    	recargar_pagina_endiv("#mainModEvaluacion", "DisenadorEvaluaciones.php");
+    });
+
+    function recargar_pagina_endiv(contenedorDeCarga, linkACargar){
+    	$(contenedorDeCarga).load(linkACargar);
+    	$(contenedorDeCarga).fadeIn(1000);
+    }
+
+	$(".btn_cerrar").on("click", function(){
+		//mostr_ocultr("#"+$(this).attr("data-idcerrar"));
+		alert("kshdbcklsjd");
+    });   
+    $(".btn_tipo_pregunta").on("click", function(){
+    	alert("khh");
+    }) ;
 });

@@ -8,7 +8,7 @@
 		</div>
 		<div>
 			<div class="contenido_card">
-				<h4><a href="DisenadorEvaluaciones.php">Quiz #1: Introducción a android y tecnologías moviles.</a></h4>
+				<h4><a href="DisenadorEvaluaciones.php" class="linkPregunta">Quiz #1: Introducción a android y tecnologías moviles.</a></h4>
 				<label><span class="icon-clock2"></span>Tiempo limite: 20:00 min</label>
 			</div>
 			<div class="barra_opciones">
