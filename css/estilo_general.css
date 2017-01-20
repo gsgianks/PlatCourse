@@ -1,0 +1,337 @@
+*{
+  padding:0;
+  margin:0;
+  font-family:"Myriad Pro", sans-serif;
+  list-style: none;
+}
+button,a,input[type=submit]{
+  cursor: pointer;
+}
+body{
+  background-color:#13232f;
+}
+nav{
+  background:#1ab188;
+  color:#fff;
+  width: 100%;
+  overflow:auto;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  min-height:3em;
+  max-height:3em;
+}
+nav ul{
+  float: right;
+  overflow: auto;
+  width: 50%;
+  margin-bottom: 1%;
+}
+nav ul > li{
+  display:inline-block;
+  width:20%;
+}
+nav ul > li a{
+  display: block;
+  position: relative;
+  text-decoration:none;
+  color:#fff;
+  width: 100%;
+  padding:7px 0; 
+}
+nav ul > li a:before{
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all .3s;
+}
+nav ul > li a:hover:before{
+  width: 100%;
+}
+
+.center_to_sides:before{
+  left:45%;
+}
+.center_to_sides:hover:before{
+  left:0;
+}
+/*Login styles*/
+.login_main{
+  margin:5% 30% 0% 30%;
+  width:40%;
+}
+.login_main h1,
+.login_main h2{
+  color:#fff;
+  text-align: center;
+}
+.login_main h1 i{
+  border-radius: 50%;
+  margin-right: 1%;
+  font-size: 24px;
+}
+.login_main h2{
+  color:#757575;
+  <!--background: #68EFAD;-->
+}
+.login_main input[type=submit]{
+  margin-top:4%;
+  border-radius: 15px;
+}
+.form_card{
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 10px 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.input_redondo_oscuro{
+  border:2px solid #E0E0E0;
+  background: #E0E0E0;
+  padding:2%;
+  margin-top: 4%;
+  border:none;
+  width: 90%;
+  font-size: 17px;
+  outline: none;
+  -webkit-border-radius: 15px;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.input_redondo_oscuro:focus{
+  border:1px solid #E0E0E0;
+  outline: none;
+  background: #fff;
+}
+.input_bordes_redondos:focus{
+  border:2px solid #E0E0E0;
+  outline: none;
+  background: #fff;
+   -webkit-outline: none;
+  -webkit-border:2px solid #E0E0E0;
+  -webkit-box-shadow: 0 0 5px #719ECE;
+  -moz-outline: none;
+  -moz-border:2px solid #E0E0E0;
+  -moz-box-shadow: 0 0 5px #719ECE;
+}
+.input_icono{
+ background: #E0E0E0;
+ margin-top: 4%;
+ -webkit-border-radius: 15px;
+ padding-left: 10px; 
+}
+.input_icono{
+  color:#757575;
+}
+.boton-borde{
+  border: 2px solid #616161;
+  padding: 3%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+}
+
+.boton-borde:hover {
+  color: white;
+}
+
+.boton_borde_cancel{
+  color:#13232f;
+  border: 2px solid #13232f;
+  background: #fff;
+}
+.boton_borde_cancel:hover{
+  background:#13232f;
+  color: #fff;
+}
+.boton_borde_aceptar{
+  color:#26a69a;
+  border: 2px solid #26a69a;
+  background: #fff;
+}
+.boton_borde_aceptar:hover{
+  background:#26a69a;
+  color: #fff;
+}
+.bSend:hover{
+  background: #fff;
+  color: #283593;
+}
+.button_fill{
+  color:#fff;
+  padding: 3%;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+  transition: all 200ms ease-in-out;
+  border:none;
+  font-size: 18px;
+}
+.button_fill:active {
+  background: darken(#7E57C2, 20%);
+  border-bottom: .3em solid darken(#7E57C2, 30%);
+}
+.card{
+  background: #fff;
+  box-shadow:0 2px 5px 0 rgba(0,0,0,.26);
+}
+/*Listado de evaluaciones-------------------------------*/
+.contenedor_card_evaluacion .card{
+  padding: 2% 0% 0% 2%;
+  overflow:auto;
+}
+.contenedor_card_evaluacion .card > div:nth-child(1){
+  width:10%;
+  margin:5% 0% 5% 0;
+}
+.contenedor_card_evaluacion .card > div:nth-child(2) label{
+  color:#616161;
+}
+.contenedor_card_evaluacion .card > div:nth-child(2) h4{
+  margin-bottom: 1%;
+}
+.contenedor_card_evaluacion .card > div:nth-child(2) label span{
+  padding-right: 1%;
+}
+.contenedor_card_evaluacion .card > div:nth-child(2){
+  width:70%;
+}
+.contenedor_card_evaluacion .card >  div:nth-child(1) span{
+  color: #26a69a;
+  width: 20%;
+  padding: 1em;
+  border-radius: 50%;
+  font-size: 19px;
+}
+.contenedor_card_evaluacion .card > div{
+  float: left;
+}
+
+.contenedor_card_evaluacion .card{
+  margin-top: 3%;
+}
+.contenedor_card_evaluacion .barra_opciones{
+  padding: 2%;
+  border-top: 1px solid #BDBDBD;
+  margin-top: 4%;
+}
+.contenedor_card_evaluacion .barra_opciones > span{
+  font-size: 17px;
+  margin-right: 5%;
+  color: #616161;
+  padding: 8px;
+  border-radius: 50%;
+}
+.contenedor_card_evaluacion .barra_opciones > span:hover{
+  color: #1ab188;
+  background: #13232f;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+}
+/*Listado de evaluaciones*/
+
+/*colores*/
+.verde_agua{
+  background: #26a69a;
+}
+.gris{
+  background:#eee;
+}
+.azul_oscuro{
+  background:#13232f;
+}
+
+.sombra_boton{
+  box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 
+             0 1px 5px 0 rgba(0,0,0,0.12),
+             0 3px 1px -2px rgba(0,0,0,0.2);
+  -webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 
+             0 1px 5px 0 rgba(0,0,0,0.12),
+             0 3px 1px -2px rgba(0,0,0,0.2);
+  -0-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 
+             0 1px 5px 0 rgba(0,0,0,0.12),
+             0 3px 1px -2px rgba(0,0,0,0.2);
+}
+/*Colores*/
+/*Eventos*/
+.hover_verde:hover{
+  background: #1ab188;
+}
+.hover_azul_verde:hover{
+  color: #fff;
+  background: #13232f;
+}
+/*Eventos*/
+.centrar_contenido_main{
+  width: 60%;
+  margin:3% 20%;
+}
+.btn_flotante {
+  display:inline-block;
+  height: 56px;
+  position: fixed;
+  width: 56px;
+  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+  cursor: pointer;
+  border-radius: 50%;
+  color: #fff;
+  bottom: 45px;
+  right: 24px;
+  text-align: center;
+  font-size:16px;
+  text-decoration:none;
+  line-height: 58px;
+}
+/*formulario evaluacion*/
+.modal{
+  background-color: rgba(0,0,0,.5);
+  position:fixed;
+  z-index:1;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;  
+}
+.modal .contenido_modal{
+  background-color:#fff;
+  width:40%;
+  padding: 10px 20px;
+  margin: 10% auto;
+  position: relative;
+}
+.fEvaluacion div{
+  margin-top:3%;
+} 
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  color:#fff;
+  border-top: 1px dashed #26a69a;
+}
+footer p{
+ padding:10px;  
+}
+
+/*Media queries 0 2px 5px 0 rgba(0,0,0,.26);
+}*/
+@media only screen and (max-width: 580px) {
+  .login_main{
+    width: 65%;
+    margin:5% 2%;
+  }
+  .form_card{
+    min-width: 100%;
+  }
+}
