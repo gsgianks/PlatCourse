@@ -6,7 +6,7 @@ $(document).ready(function () {
     //$(".opt-selec-unica").draggable();
     
     $('form').submit(function (e) {
-
+        alert("click form");
         e.preventDefault();
     
 
@@ -14,8 +14,10 @@ $(document).ready(function () {
         var url = "Controller/controladora_login.php";        
 
         if($(this).children('input[name=consulta]').val()=== "selec_unica"){
-        	//alert("select unica");
-        	seleccionUnica(data);
+        	alert("select unica");
+        	//seleccionUnica(data);
+        }else if($(this).children('input[name=consulta]').val()=== "selec_multi"){
+            alert("select multi");
         }
         //validar
 
@@ -143,4 +145,45 @@ function guardarEvaluacion(){
 
 function btnRespuesta(boton){
 	boton.css('background','green');
+}
+
+//seleccion multiple
+
+function agregarMultiple(){
+    $('#formSelecMultiple').css("display", "block");
+}
+
+function cerrarMultiple(){
+    $('#formSelecMultiple').css("display", "none");
+}
+
+function addOptionMulti(){
+    var temp = $(".opt_multi").length+1;
+    if(temp <8){
+
+        $(".opt_multi").append("<tr><td><textarea name='pregunta' placeholder='Ejemplo: ¿Cúal es el nombre de..?' class='input_redondo_oscuro'></textarea></td><td><button class='botonCircular rojo_flat'><span class='icon-minus'></span></button></td></tr>");
+    }else{
+
+        alert("La cantidad maxima de opciones es 7");
+    }
+}
+
+// seleccion unica
+function agregarUnica(){
+    $('#formSelecUnica').css("display", "block");
+}
+
+function cerrarUnica(){
+    $('#formSelecUnica').css("display", "none");
+}
+
+function addOptionUnica(){
+    var temp = $(".opt_unica").length+1;
+    if(temp <8){
+
+        $(".opt_unica").append("<tr><td><textarea name='pregunta' placeholder='Ejemplo: ¿Cúal es el nombre de..?' class='input_redondo_oscuro'></textarea></td><td><button class='botonCircular rojo_flat'><span class='icon-minus'></span></button></td></tr>");
+    }else{
+
+        alert("La cantidad maxima de opciones es 7");
+    }
 }
