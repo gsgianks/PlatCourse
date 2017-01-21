@@ -17,17 +17,19 @@
 		<p>Tiempo: 00:20:00</p>
 	</div>
 	<div class="contenido_preguntas">
-		<div class="selección_unica">
+		<div class="seleccion_unica">
 			<h3>Selecci&oacute;n &Uacute;nica</h3>
 			<div class='pre_selec_unica'>
-                <h4>¿Pregunta?</label><h4>
+                <h4>¿Pregunta?<h4>
+                <input type='radio' name='option' value='value'>hola<br>
+                <input type='radio' name='option' value='value'>hola<br>
                 <input type='radio' name='option' value='value'>hola<br>
                 <input type='radio' name='option' value='value'>hola<br>
             </div>
 		</div>
 		<div class="seleccion_multiple">
+			<h3>Selecci&oacute;n multiple</h3>
 			<div class="pre_selec_multi">
-				<h3>Selecci&oacute;n multiple</h3>
 				<h4>¿Cúal de los siguientes nombres son teorias de la creación del universo?</h4>
 				<input type="checkbox" name="respuesta">Teoria del BigBang<br>
 				<input type="checkbox" name="respuesta">Generacional<br>
@@ -40,26 +42,26 @@
 	</div>
 </div>
 <div id="formSelecMultiple" class="modal" style="display:none;">
-	<form class="formPregunta">
+	<form class="formPregunta form_select_multiple">
 		<input type="hidden" name="consulta" value="selec_multi">
 		<span data-idcerrar="formSelecMultiple" class="icon-times btn_cerrar"></span>
 		<h3>Pregunta selección múltiple</h3>
 		<label for="pregunta">Descripción de la pregunta</label><br>
-		<textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro"></textarea><br>	
+		<textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro" required></textarea><br>	
 		<label for="">Agregar respuestas</label>
 		<button  onclick="addOptionMulti()" type="button" class="botonCircular verde_limon"><span class="icon-plus"></span></button><br>
 		<table class="cntRespuesta opt_multi">
 			<tr>
-				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro"></textarea></td>
+				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro" required></textarea></td>
 			</tr>
 			<tr>
-				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro"></textarea></td>
+				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro" required></textarea></td>
 			</tr>
 			<tr>
-				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro"></textarea></td>
+				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro" required></textarea></td>
 			</tr>
 			<tr>
-				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro"></textarea></td>
+				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro" required></textarea></td>
 			</tr>
 		</table>
 		<!--<div class="cntRespuesta">
@@ -73,26 +75,26 @@
 	</form>
 </div>
 <div id="formSelecUnica" class="modal" style="display:none;">
-	<form class="formPregunta">
+	<form class="formPregunta form_select_unica">
 		<input type="hidden" name="consulta" value="selec_unica">
 		<span data-idcerrar="formSelecMultiple" class="icon-times btn_cerrar"></span>
 		<h3>Pregunta selección U&acute;nica</h3>
 		<label for="pregunta">Descripción de la pregunta</label><br>
-		<textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro"></textarea><br>	
+		<textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro" required></textarea><br>	
 		<label for="">Agregar respuestas</label>
 		<button  onclick="addOptionUnica()" type="button" class="botonCircular verde_limon"><span class="icon-plus"></span></button><br>
 		<table class="cntRespuesta opt_unica">
 			<tr>
-				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro"></textarea></td>
+				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro" required></textarea></td>
 			</tr>
 			<tr>
-				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro"></textarea></td>
+				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro" required></textarea></td>
 			</tr>
 			<tr>
-				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro"></textarea></td>
+				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro" required></textarea></td>
 			</tr>
 			<tr>
-				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro"></textarea></td>
+				<td><textarea name="pregunta" placeholder="Ejemplo: ¿Cúal es el nombre de..?" class="input_redondo_oscuro" required></textarea></td>
 			</tr>
 		</table>
 		<div class="footOpciones">

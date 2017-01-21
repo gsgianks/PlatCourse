@@ -15,9 +15,10 @@ $(document).ready(function () {
 
         if($(this).children('input[name=consulta]').val()=== "selec_unica"){
         	alert("select unica");
-        	//seleccionUnica(data);
+        	selectUnica(data);
         }else if($(this).children('input[name=consulta]').val()=== "selec_multi"){
             alert("select multi");
+            selectMulti(data);
         }
         //validar
 
@@ -158,14 +159,77 @@ function cerrarMultiple(){
 }
 
 function addOptionMulti(){
-    var temp = $(".opt_multi").length+1;
-    if(temp <8){
+    var temp = $(".opt_multi tr").length;
+   // alert("add option multiple "+temp);
+    if(temp <7){
 
-        $(".opt_multi").append("<tr><td><textarea name='pregunta' placeholder='Ejemplo: ¿Cúal es el nombre de..?' class='input_redondo_oscuro'></textarea></td><td><button class='botonCircular rojo_flat'><span class='icon-minus'></span></button></td></tr>");
+        $(".opt_multi").append("<tr><td style='display: none;'>"+temp+"</td><td><textarea name='pregunta' placeholder='Ejemplo: ¿Cúal es el nombre de..?' class='input_redondo_oscuro'></textarea></td><td><button type='button' onclick='deleteOptionMultiple("+temp+")' class='botonCircular rojo_flat'><span class='icon-minus'></span></button></td></tr>");
     }else{
 
         alert("La cantidad maxima de opciones es 7");
     }
+}
+
+function selectMulti(data){
+   // alert("function multiple")
+    /*<div class="pre_selec_multi">
+                <h4>¿Cúal de los siguientes nombres son teorias de la creación del universo?</h4>
+                <input type="checkbox" name="respuesta">Teoria del BigBang<br>
+                <input type="checkbox" name="respuesta">Generacional<br>
+                <input type="checkbox" name="respuesta">Universo estacionario<br>
+                <input type="checkbox" name="respuesta">Judío Cristiana<br>
+                <input type="checkbox" name="respuesta">Ninguna de las anteriores<br>
+                <input type="checkbox" name="respuesta">Todas<br>
+            </div>*/
+
+    var html = "<div class='pre_selec_multi'>";
+    $(data).each(function(i, field){
+        if(i===1){
+            html+="<h4>¿"+field.value+"?</h4>"
+        }else if(i>1){
+            html+="<input type='checkbox' name='option' value='"+field.value+"'>"+field.value+"<br>";
+        }
+    });
+    html+="</div>";
+    //alert(html);
+
+    if($('.seleccion_multiple').is(':empty')){
+        alert("empty");
+        $(".seleccion_multiple").append("<h4>Selecci&oacute;n unica</h4>");
+        $(".seleccion_multiple").append(html);
+
+    }else{
+        alert("!empty")
+        $(".seleccion_multiple").append(html);
+
+    }
+    $('#formSelecMultiple').css("display", "none");
+   // $(".formulario input[type=text]").val("");
+   // $(".addOption").remove();
+   // $('#marqueX').css("display", "none");  
+   $('.form_select_multiple').each (function(){
+
+      this.reset();
+
+    }); 
+}
+
+function deleteOptionMultiple(num_fila){
+   // alert("delete click "+num_fila);
+    $(".opt_multi tr").each(function (index) 
+        {
+            //alert(index);
+            $(this).children("td").each(function (index2) 
+            {
+            //  alert(index2+"  "+$(this).text());
+                if($(this).text() === ""+num_fila){
+              //      alert("encontrado");
+                    
+                    $(this).closest('tr').remove();
+                }
+            })            
+        });
+    //$("#table-options-x").find("tr:eq("+num_fila+")").remove();
 }
 
 // seleccion unica
@@ -178,12 +242,73 @@ function cerrarUnica(){
 }
 
 function addOptionUnica(){
-    var temp = $(".opt_unica").length+1;
-    if(temp <8){
+    var temp = $(".opt_unica tr").length;
+    //alert("add option multiple "+temp);
+    if(temp <7){
 
-        $(".opt_unica").append("<tr><td><textarea name='pregunta' placeholder='Ejemplo: ¿Cúal es el nombre de..?' class='input_redondo_oscuro'></textarea></td><td><button class='botonCircular rojo_flat'><span class='icon-minus'></span></button></td></tr>");
+        $(".opt_unica").append("<tr><td style='display: none;'>"+temp+"</td><td><textarea name='pregunta' placeholder='Ejemplo: ¿Cúal es el nombre de..?' class='input_redondo_oscuro'></textarea></td><td><button type='button' onclick='deleteOptionUnica("+temp+")' class='botonCircular rojo_flat'><span class='icon-minus'></span></button></td></tr>");
     }else{
 
         alert("La cantidad maxima de opciones es 7");
     }
+}
+
+function selectUnica(data){
+    alert("function unica")
+    /*<div class='pre_selec_unica'>
+                <h4>¿Pregunta?</label><h4>
+                <input type='radio' name='option' value='value'>hola<br>
+                <input type='radio' name='option' value='value'>hola<br>
+                <input type='radio' name='option' value='value'>hola<br>
+                <input type='radio' name='option' value='value'>hola<br>
+            </div>*/
+
+    var html = "<div class='pre_selec_unica'>";
+    $(data).each(function(i, field){
+        if(i===1){
+            html+="<h4>¿"+field.value+"?</h4>"
+        }else if(i>1){
+            html+="<input type='radio' name='option' value='"+field.value+"'>"+field.value+"<br>";
+        }
+    });
+    html+="</div>";
+   // alert(html);
+
+    if($('.seleccion_unica').is(':empty')){
+        alert("empty");
+        $(".seleccion_unica").append("<h4>Selecci&oacute;n unica</h4>");
+        $(".seleccion_unica").append(html);
+
+    }else{
+        alert("!empty")
+        $(".seleccion_unica").append(html);
+
+    }
+    $('#formSelecUnica').css("display", "none");
+   // $(".formulario input[type=text]").val("");
+   // $(".addOption").remove();
+   // $('#marqueX').css("display", "none");   
+   $('.form_select_unica').each (function(){
+
+      this.reset();
+
+    });
+}
+
+function deleteOptionUnica(num_fila){
+  //  alert("delete click "+num_fila);
+    $(".opt_unica tr").each(function (index) 
+        {
+            //alert(index);
+            $(this).children("td").each(function (index2) 
+            {
+              //alert(index2+"  "+$(this).text());
+                if($(this).text() === ""+num_fila){
+              //      alert("encontrado");
+                    
+                    $(this).closest('tr').remove();
+                }
+            })            
+        });
+    //$("#table-options-x").find("tr:eq("+num_fila+")").remove();
 }
