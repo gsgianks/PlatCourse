@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'puresoft';
-  src:  url('puresoft.eot?jirxap');
-  src:  url('puresoft.eot?jirxap#iefix') format('embedded-opentype'),
-    url('puresoft.ttf?jirxap') format('truetype'),
-    url('puresoft.woff?jirxap') format('woff'),
-    url('puresoft.svg?jirxap#puresoft') format('svg');
+  src:  url('puresoft.eot?y31zq');
+  src:  url('puresoft.eot?y31zq#iefix') format('embedded-opentype'),
+    url('puresoft.ttf?y31zq') format('truetype'),
+    url('puresoft.woff?y31zq') format('woff'),
+    url('puresoft.svg?y31zq#puresoft') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-times:before {
+  content: "\e901";
+}
 .icon-account_circle:before {
   content: "\e853";
 }
@@ -47,6 +50,9 @@
 }
 .icon-description:before {
   content: "\e873";
+}
+.icon-more_vert:before {
+  content: "\e5d4";
 }
 .icon-receipt:before {
   content: "\e8b0";
@@ -152,6 +158,9 @@
 }
 .icon-clipboard:before {
   content: "\e9b8";
+}
+.icon-list2:before {
+  content: "\e9bb";
 }
 .icon-warning:before {
   content: "\ea07";
