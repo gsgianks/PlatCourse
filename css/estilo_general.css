@@ -16,20 +16,23 @@ nav{
   width: 100%;
   overflow:auto;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-  min-height:3em;
-  max-height:3em;
+  min-height:3.5em;
+  max-height:3.5em;
 }
-nav ul{
-  float: right;
-  overflow: auto;
-  width: 50%;
-  margin-bottom: 1%;
+nav > ul{
+  width: 95%;
+  margin:0.7% 0% 0% ;
 }
-nav ul > li{
+nav > ul > li{
   display:inline-block;
-  width:20%;
+  width:15%;
 }
-nav ul > li a{
+nav > ul > li:last-child{
+  float: right;
+  width: 25%;
+  text-align: center;
+}
+nav > ul > li a{
   display: block;
   position: relative;
   text-decoration:none;
@@ -50,6 +53,14 @@ nav ul > li a:before{
 }
 nav ul > li a:hover:before{
   width: 100%;
+}
+
+nav > ul > li > ul{
+  display: none;
+}
+
+nav > ul > li:hover > ul{
+  display: block;
 }
 
 .center_to_sides:before{
@@ -109,7 +120,7 @@ nav ul > li a:hover:before{
 .input_redondo_oscuro:focus{
   border-color:#E0E0E0;
   background: #fff;
-  box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+box-shadow:0 0 8px #666;
 }
 .input_bordes_redondos:focus{
   border:2px solid #E0E0E0;
@@ -332,6 +343,11 @@ footer {
 footer p{
  padding:10px;  
 }
+/*Formulario login*/
+#fLogin input[type=email],#fLogin input[type=password]{
+  margin-top:2.5%; 
+}
+/*Formulario login*/
 /*Formulario pregunta*/
 .formPregunta{
   background: #fff;
@@ -387,6 +403,12 @@ footer p{
 .btn_cerrar:hover{
   color:#e53935;
 }
+/*form para buscar*/
+.fBuscar input[type=text]{
+  width:60%;
+  margin: 2% 0% 2% 2%;
+}
+/*form para buscar*/
 /*Media queries 0 2px 5px 0 rgba(0,0,0,.26);
 }*/
 @media only screen and (max-width: 580px) {

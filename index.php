@@ -5,7 +5,7 @@
 	<title>LogIn</title>
 	<link rel="stylesheet" href="css/estilo_general.css">
 	<link rel="stylesheet" href="css/fonts/style.css">
-	
+	<link rel="stylesheet" href="css/Roboto/WebFont/roboto_regular_macroman/stylesheet.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/funciones_validacion_usuarios.js"></script>
 </head>
