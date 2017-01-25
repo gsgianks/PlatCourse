@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="../../css/estilo_general.css">
 	<link rel="stylesheet" href="../../css/fonts/style.css">
 	<link rel="stylesheet" href="../../css/timepicker/timepicki.css">
-	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script src="../../js/jquery.min.js"></script>
 	<script src="../../js/jquery.maskedinput.js"></script>
 	<script src="../../js/timepicki.js"></script>
 	

@@ -1,4 +1,6 @@
 <?php
+require_once "database.php";
+require_once "../Domain/Pregunta.php";
 
 class LogicaEvaluacion{
 	
@@ -6,15 +8,15 @@ class LogicaEvaluacion{
 
     function __construct(){}
 
-	public function guardarEvaluacion($arrayDatos){
-		$datos = "holassssi ".$arrayDatos[1]." count: *".count($arrayDatos);
-
-		//$datos." nada";
-		
-		return $datos."* fin;";
+	public function separarPreguntasEvaluacion($arrayDatos){
+		return $this->hola();
 	}
 
- 	public function guardarEvaluacionProfesor($nombre,$tiempo,$idProfesor){
+	public function hola(){
+		return "hola";
+	}	
+
+ /*	public function guardarEvaluacionProfesor($nombre,$tiempo,$idProfesor){
       
       $resultado=0;
 
@@ -25,33 +27,57 @@ class LogicaEvaluacion{
 	        }
 	        return $resultado;
     
-     }
+     }*/
 
+   public function separarPregSelectUnica($preguntas){
+        foreach($preguntas as $tipo){
+            $contador = 0;
+            $respuesta = false;
+            foreach($tipo as $tipoPregunta){
+                if($contador === 0){
+                    $this->recorrer($tipoPregunta." pregunta...");    
+                }else if($respuesta === true){
+                    $this->recorrer($tipoPregunta." respuesta...");
+                }else if($tipoPregunta === 'respuestas'){
+                    $respuesta = true;
+                }else if($respuesta === false){
+                    $this->recorrer($tipoPregunta." opcion...");
+                }
+                $contador++;
+            }
+        }
+    }
 
-     /*
-	/*for($i=0;$i<intval($temp);$i++){
-			$datos." 1 ";
-			$datos.$arrayDatos[$i]." - ";
+    public function separarPregSelectMulti($preguntas){
+        foreach($preguntas as $tipo){
+            $contador = 0;
+            $respuesta = false;
+            foreach($tipo as $tipoPregunta){
+                if($contador === 0){
+                    $this->recorrer($tipoPregunta." pregunta...");    
+                }else if($respuesta === true){
+                    $this-> recorrer($tipoPregunta." respuesta...");
+                }else if($tipoPregunta === 'respuestas'){
+                    $respuesta = true;
+                }else if($respuesta === false){
+                    $this->recorrer($tipoPregunta." opcion...");
+                }
+                $contador++;
+            }
+        }
+
+    }
+
+    function recorrer($dato){
+
+    	$conn = getConnection();
+        $sql = "call pahola('".$dato."');";
+        if ($conn->query($sql) === TRUE) {
+	        $conn->close();
+        }else {
+			$conn->close();
 		}
-//$temp = count($arrayDatos);
-
-		if(5 < 6){
-			$datos." iguales";
-		}
-		for($i=0;$i<count($arrayDatos);$i++) {
-
-			$datos.'<br />';
-
-		}*/
-		//$datos." nada";
-		/*foreach($arrayDatos as $tipoPregunta){
-			$datos." ".$tipoPregunta;
-		 	/*foreach($tipoPregunta as $pregunta){
-		 		for($i=0; $i<count($pregunta); $i++){
-					$datos.$pregunta[$i]." - ";
-			    }
-		 	}
-		 }*/
-     */
+	
+    } 
 }
 ?>
