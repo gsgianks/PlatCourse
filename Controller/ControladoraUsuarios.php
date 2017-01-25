@@ -1,14 +1,14 @@
 <?php
-	if(isset($_POST["consulta"])){
+    require_once "../Logic/LogicaLogin.php";
+	
+	if(isset($_REQUEST["consulta"])){
 		
-		switch ($_POST["consulta"]) {
-			case 'validarLogin':
+		switch ($_REQUEST["consulta"]) {
 			
-				if(!empty($_POST["correo"]) && !empty($_POST["pass"])){
-					echo "su correo: ".$_POST["correo"]." y su contrseña: ".$_POST["pass"];
-				}else{
-					echo "Usuario no valido.\n Vuelva a intentar.";
-				}
+			case 'validarLogin':
+				
+				$logicaLogin = new LogicaLogin();
+				echo $logicaLogin->validarUsuario($_REQUEST["correo"], $_REQUEST["pass"]);
 				
 				break;
 			
